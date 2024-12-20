@@ -31,7 +31,7 @@ navToggle.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     new Typed('.typed-text', {
-        strings: ["Software Engineer & AI Researcher", "Turning Ideas into Reality"], 
+        strings: ["Software Engineer", "Turning Ideas into Reality"], 
         typeSpeed: 50, 
         backSpeed: 30, 
         backDelay: 1000, 
