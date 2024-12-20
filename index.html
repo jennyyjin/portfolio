@@ -1,125 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Jenny Jin Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <h1 style="font-size: 2.5rem; font-weight: bold;">Jenny Jin</h1>
-            <img src="images/headshot.jpg" alt="headshot" class="headshot">
-            <p>I aspire to build intelligent and innovative software solutions.</p>
-            <nav class="nav">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-            </nav>
-            <div class="socials">
-                <a href="https://github.com/jennyyjin" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/jenny-yiqi-jin" target="_blank">LinkedIn</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Jenny Jin</h1>
+            <p class="typed-container">
+                <span class="typed-text"></span> 
+            </p>
+            <a href="#projects" class="cta-button">Explore My Work</a>
+        </div>
+    </header>
+
+    <nav class="top-nav">
+        <div class="nav-logo">JJ</div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I’m a senior at Cornell University specializing in <b>Computer Science</b> and <b>Operations Research</b>.
+                        I build AI-driven solutions to real-world challenges, focusing on <b>machine learning</b> and <b>computer vision</b>.
+                    </p>
+                    <p>
+                        I thrive in the intersection of cutting-edge research and practical applications. 
+                        I’m seeking opportunities in software engineering or research-focused roles.
+                    </p>
+                    <a href="mailto:yj226@cornell.edu" class="email-link">Get in Touch</a>
+                </div>
+                <div class="about-media">
+                    <img src="images/headshot.jpg" alt="Jenny Jin" class="hero-headshot" />
+                </div>
             </div>
-        </aside>
+        </section>
+        
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <p class="skills-intro">From Machine Learning to Web Development, here are some areas I'm proficient in:</p>
+            <div class="skills-list">
+                <div class="skill-bar" data-skill="Python" data-level="90%"></div>
+                <div class="skill-bar" data-skill="Java" data-level="80%"></div>
+                <div class="skill-bar" data-skill="Machine Learning" data-level="85%"></div>
+                <div class="skill-bar" data-skill="Computer Vision" data-level="75%"></div>
+                <div class="skill-bar" data-skill="Operations Research" data-level="70%"></div>
+            </div>
+        </section>
+        
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Software Engineering Intern @ NetEase</h3>
+                    <p><em>Jun - Aug 2023</em></p>
+                    <p>Boosted UI performance and built a smarter chatbot to enhance user experiences on a low-code development platform.</p>
+                    <img src="images/netease.png" alt="NetEase logo" />
+                    <button class="learn-more-btn modal-trigger" data-modal-target="#netease-modal">Learn More</button>
+                </div>
 
-        <main class="content">
-            <section id="about" class="section">
-                <h2>About Me</h2>
-                <p>
-                    I am a senior at Cornell University, pursuing a degree in <b>Computer Science</b> and <b>Operations Research</b>. 
-                    
-                </p>
-                <p>I hope to design and implement software solutions that address real-world problems. 
-                    With research experience in <b>machine learning</b> and <b>computer vision</b>, I aim to develop impactful systems that bridge research 
-                    and practical applications. I am seeking opportunities in software engineering or research-focused roles. 
-                    Feel free to reach out at <a style="color: #ccd6f6" href="mailto:yj226@cornell.edu" class="email-link">yj226@cornell.edu</a>.
-                </p>
-            </section>
-            
-            <section id="experience" class="section">
-                <h2>Experience</h2>
-            
-                <div class="job">
-                    <div class="job-content">
-                        <div class="job-text">
-                            <h3>Software Engineering Intern</h3>
-                            <p>NetEase | Jun-Aug 2023</p>
-                            <ul>
-                                <li>Enhanced the development of CodeWave, a low-code application development platform, and improved UI performance by 18%.</li>
-                                <li>Designed a chatbot using transformer models, increasing query efficiency by 34%.</li>
-                            </ul>
-                            <p>Java | TypeScript</p>
-                        </div>
-                        <img src="images/netease.png" alt="NetEase logo" class="experience-image">
-                    </div>
+                <div class="experience-card">
+                    <h3>Research Assistant @ Cornell Vision Group</h3>
+                    <p><em>Jun 2024 - Present</em></p>
+                    <p>Developed vision-language models to answer questions from satellite imagery with improved reasoning capabilities.</p>
+                    <img src="images/vision.png" alt="Cornell Vision Group logo" />
+                    <button class="learn-more-btn modal-trigger" data-modal-target="#vision-modal">Learn More</button>
                 </div>
-            
-                <div class="job">
-                    <div class="job-content">
-                        <div class="job-text">
-                            <h3>Research Assistant</h3>
-                            <p>Cornell Vision Group | Jun 2024–Present</p>
-                            <ul>
-                                <li>Developed a VQA system for satellite imagery using vision-language models.</li>
-                                <li>Created instruction data incorporating complex reasoning, detailed descriptions, and location references for model fine- tuning; Pretrained, fine-tuned, and evaluated model performance across various tasks.</li>
-                            </ul>
-                            <p>Python</p>
-                        </div>
-                        <img src="images/vision.png" alt="Cornell Vision Group logo" class="experience-image">
-                    </div>
+        
+                <div class="experience-card">
+                    <h3>Undergraduate Researcher @ SciFi Lab</h3>
+                    <p><em>Feb 2024 - Present</em></p>
+                    <p>Built gesture-recognition interfaces for AI glasses, enabling seamless virtual keypad interactions.</p>
+                    <img src="images/scifi.png" alt="SciFi Lab logo" />
+                    <button class="learn-more-btn modal-trigger" data-modal-target="#scifi-modal">Learn More</button>
                 </div>
-            
-                <div class="job">
-                    <div class="job-content">
-                        <div class="job-text">
-                            <h3>Undergraduate Researcher</h3>
-                            <p>Cornell Smart Computer Interfaces for Future Interactions Lab | Feb 2024–Present</p>
-                            <ul>
-                                <li>Built a vision-based interface for AI glasses, integrating gesture recognition algorithms to detect finger
-                                    movements and simulate virtual keypad presses.</li>
-                                <li>Leveraged CNN-LSTM models with Connectionist Temporal Classification (CTC) loss to decode American Sign Language
-                                    fingerspelling from high-volume video data. </li>
-                            </ul>
-                            <p>Python</p>
-                        </div>
-                        <img src="images/scifi.png" alt="SciFi Lab" class="experience-image">
-                    </div>
+        
+                <div class="experience-card">
+                    <h3>CS Subteam Member @ Cornell Cup Robotics</h3>
+                    <p><em>2024 - Present</em></p>
+                    <p>Designed educational robots and built chatbots for natural language interactions using custom GUIs.</p>
+                    <img src="images/robotics.png" alt="Cornell Cup Robotics logo" />
+                    <button class="learn-more-btn modal-trigger" data-modal-target="#robotics-modal">Learn More</button>
                 </div>
-                <div class="job">
-                    <div class="job-content">
-                        <div class="job-text">
-                            <h3>CS Subteam Member</h3>
-                            <p>Cornell Cup Robotics | 2024–Present</p>
-                            <ul>
-                                <li>Designed and built a fully functional educational robot with navigation and command execution capabilities via a custom
-                                    Graphical User Interface.</li>
-                                <li>Created a dynamic chatbot using Python and JavaScript, enabling natural language interactions for users to issue commands
-                                    and receive contextual responses through both text and speech inputs.</li>
-                            </ul>
-                            <p>Python | JavaScript</p>
-                        </div>
-                        <img src="images/robotics.png" alt="robotics" class="experience-image">
-                    </div>
+            </div>
+        
+            <div class="modal" id="netease-modal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <h3>Software Engineering Intern @ NetEase</h3>
+                    <p>Details about my work:</p>
+                    <ul>
+                        <li>Optimized UI performance by 18% for a low-code development platform.</li>
+                        <li>Built a transformer-based chatbot, boosting query efficiency by 34%.</li>
+                    </ul>
                 </div>
-            </section>
+            </div>
+        
+            <div class="modal" id="vision-modal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <h3>Research Assistant @ Cornell Vision Group</h3>
+                    <p>Details about my work:</p>
+                    <ul>
+                        <li>Developed a VQA system for satellite imagery using vision-language models.</li>
+                        <li>Fine-tuned models for improved reasoning and detailed instruction following.</li>
+                    </ul>
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR5BV1Xk6oc6OmcndhZ310c8PMRYBLRW84R2_uwzuxDaJpOz1H2zJh7840AG3k8V-ERNKFQhKztomJb/embed?start=true&loop=true&delayms=10000" frameborder="0" width="600" height="800" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+            </div>
+        
+            <div class="modal" id="scifi-modal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <h3>Undergraduate Researcher @ SciFi Lab</h3>
+                    <p>Details about my work:</p>
+                    <ul>
+                        <li>Built a vision-based interface for AI glasses, integrating gesture recognition for virtual keypad presses.</li>
+                        <li>Used CNN-LSTM models with CTC loss to decode ASL fingerspelling from video data.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="modal" id="robotics-modal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <h3>CS Subteam Member @ Cornell Cup Robotics</h3>
+                    <p>Details about my work:</p>
+                    <ul>
+                        <li>Designed and built an educational robot with navigation & command execution via a custom GUI.</li>
+                        <li>Created a chatbot using Python & JavaScript for natural language interactions and commands.</li>
+                    </ul>
+                    <video width="600" height="360" controls>
+                        <source src="images/robot.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Pac-Man AI Simulation</h3>
+                    <p>
+                        Designed game agents for Pac-Man using adversarial search, reinforcement learning, and stochastic algorithms.
+                    </p>
+                    <img src="images/ai.png" alt="Pac-Man AI Simulation" />
+                    <button class="learn-more-btn modal-trigger" data-modal-target="#pacman-modal">Learn More</button>
+                </div>
+        
+                <div class="project-card">
+                    <h3>Chromis Fish Counting</h3>
+                    <p>
+                        Leveraged YOLOv8 and clustering to estimate fish populations from underwater video data with improved accuracy.
+                    </p>
+                    <img src="images/fish.png" alt="Chromis Fish Counting" />
+                    <button class="learn-more-btn modal-trigger" data-modal-target="#fish-modal">Learn More</button>
+                </div>
+            </div>
+        
+            <div class="modal" id="pacman-modal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <h3>Pac-Man AI Simulation</h3>
+                    <p>This project involved implementing various AI techniques, including:</p>
+                    <ul>
+                        <li>Adversarial search algorithms (Minimax, Alpha-Beta pruning).</li>
+                        <li>Reinforcement Learning for autonomous decision-making.</li>
+                    </ul>
+                    <p>Check out a quick demo video below:</p>
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRSC38PJj1M-VSPepAi6OU2fZ7zFf2N4uJ7uUtQ69ZwzfOacEkMvx0RvWalHE-fISJGCFgkyBt0YB3u/embed?start=true&loop=true&delayms=3000" frameborder="0" width="600" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+            </div>
+        
+            <div class="modal" id="fish-modal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <h3>Chromis Fish Counting</h3>
+                    <p>A computer vision project leveraging YOLOv8 for detection and clustering to estimate fish populations.</p>
+                    <ul>
+                        <li>Handled occlusion and motion blur in underwater footage.</li>
+                        <li>Improved model accuracy by 36% with custom loss functions.</li>
+                    </ul>
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQTSplzzo_-hA7lcwtuSuPSdxSfamDFkUOWgwrZAmcbXyIXVHKYCPQ18MEqhjKuHFhuRaChfhLobFWA/embed?start=true&loop=true&delayms=10000" frameborder="0" width="600" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+            </div>
+        </section>        
 
-            <section id="projects" class="section">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3><a style="color: #ccd6f6;" href="https://github.com/your-repository-link" target="_blank" class="project-link">Pac-Man AI Simulation</a></h3>
-                    <p>Designed game agents for the game Pacman using basic, adversarial and stochastic search algorithms, and reinforcement learning concepts. </p>
-                    <img src="images/ai.png" alt="ai project" class="project-image">
-                </div>
-                <div class="project">
-                    <h3><a style="color: #ccd6f6;" href="https://github.com/your-repository-link" target="_blank" class="project-link">Pac-Man AI Simulation</a></h3>
-                    <p>Built a Python-based program utilizing YOLOv8 for Chromis fish counting in underwater videos, addressing challenges such as fish occlusion and movement.Implemented a comprehensive pipeline for data preprocessing, model training, and deployment, improving tracking accuracy by 36% through custom loss functions and optimization techniques. Leveraged K-Means and Gaussian Mixture Models to estimate fish colony sizes from spatial and behavioral data.</p>
-                    <img src="images/fish.png" alt="vision project" class="project-image2">
-                </div>
-            </section>
-        </main>
-    </div>
+        <section id="contact" class="section contact-section">
+            <h2>Contact Me</h2>
+            <p>Have a question or want to discuss a potential collaboration? Let’s talk!</p>
+            <div class="contact-links">
+                <a href="mailto:yj226@cornell.edu" target="_blank">Email</a>
+                <a href="https://www.linkedin.com/in/jenny-yiqi-jin" target="_blank">LinkedIn</a>
+                <a href="https://github.com/jennyyjin" target="_blank">GitHub</a>
+            </div>
+        </section>
 </body>
 </html>
